@@ -368,37 +368,35 @@ export default function TaxWidget({ onOpenModal }: TaxWidgetProps) {
                             </div>
                         </div>
 
-                        <div className={styles.caesarLeadGrid}>
-                            <div className={styles.caesarField}>
-                                <label htmlFor="caesarName">
-                                    Name <span className={styles.caesarOptional}>(optional)</span>
-                                </label>
-                                <input
-                                    id="caesarName"
-                                    type="text"
-                                    autoComplete="name"
-                                    value={leadName}
-                                    onChange={(e) => setLeadName(e.target.value)}
-                                />
-                            </div>
+                        <div className={styles.caesarField}>
+                            <label htmlFor="caesarName">
+                                Name <span className={styles.caesarOptional}>(optional)</span>
+                            </label>
+                            <input
+                                id="caesarName"
+                                type="text"
+                                autoComplete="name"
+                                value={leadName}
+                                onChange={(e) => setLeadName(e.target.value)}
+                            />
+                        </div>
 
-                            <div className={`${styles.caesarField} ${styles.caesarFieldRequired}`}>
-                                <label htmlFor="caesarEmail">
-                                    {leadPersona === "individual" ? "Email address" : "Work email"}
-                                </label>
-                                <input
-                                    id="caesarEmail"
-                                    type="email"
-                                    autoComplete="email"
-                                    required
-                                    value={leadEmail}
-                                    onChange={(e) => setLeadEmail(e.target.value)}
-                                />
-                                <span className={styles.caesarFieldHelp}>
-                                    We’ll send a copy of your estimate and occasional Caesar updates. No spam.
-                                </span>
-                                <span className={styles.caesarError}>{emailError}</span>
-                            </div>
+                        <div className={`${styles.caesarField} ${styles.caesarFieldRequired}`}>
+                            <label htmlFor="caesarEmail">
+                                {leadPersona === "individual" ? "Email address" : "Work email"}
+                            </label>
+                            <input
+                                id="caesarEmail"
+                                type="email"
+                                autoComplete="email"
+                                required
+                                value={leadEmail}
+                                onChange={(e) => setLeadEmail(e.target.value)}
+                            />
+                            <span className={styles.caesarFieldHelp}>
+                                We’ll send a copy of your estimate and occasional Caesar updates. No spam.
+                            </span>
+                            <span className={styles.caesarError}>{emailError}</span>
                         </div>
 
                         {leadPersona === "platform" && (

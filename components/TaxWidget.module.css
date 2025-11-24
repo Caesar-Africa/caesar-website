@@ -127,6 +127,8 @@
         0 0 0 1px rgba(99, 102, 241, 0.1);
     animation: fadeInUp 0.6s ease-out;
     position: relative;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .caesarCardHidden {
