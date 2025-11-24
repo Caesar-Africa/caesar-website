@@ -166,7 +166,7 @@ export default function PricingPage({ onNavigate, onOpenModal }: PricingPageProp
                                 <div className={styles.iconWrapper} style={{ margin: '0 auto 30px' }}>
                                     👤
                                 </div>
-                                <h2 style={{ marginBottom: '20px' }}>Coming Q2 2025</h2>
+                                <h2 style={{ marginBottom: '20px' }}>Coming Q2 2026</h2>
                                 <p style={{ color: 'var(--text-secondary)', maxWidth: '500px', margin: '0 auto 30px' }}>
                                     Self-service reports for individuals and small businesses will be offered separately. Pricing will be published when available.
                                 </p>

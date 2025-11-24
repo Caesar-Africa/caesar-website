@@ -47,7 +47,7 @@ export default function HomePage({ onNavigate, onOpenModal }: HomePageProps) {
                             <h3>Individuals & SMEs</h3>
                             <p>Self-service reports coming soon to help individuals and small businesses</p>
                             <span style={{ display: 'inline-block', marginTop: '15px', padding: '5px 15px', background: 'rgba(246, 173, 85, 0.2)', color: 'var(--warning)', borderRadius: '20px', fontSize: '0.85rem' }}>
-                                Coming Q2 2025
+                                Coming Q2 2026
                             </span>
                         </div>
                     </div>
