@@ -155,15 +155,15 @@ export default function TaxWidget({ onOpenModal }: TaxWidgetProps) {
     // State for storing lead data to send with results
     const [storedLeadData, setStoredLeadData] = useState<any>(null);
 
-    // FormSubmit helper function
-    const submitToFormSubmit = async (data: any) => {
-        const formSubmitEmail = process.env.NEXT_PUBLIC_FORMSUBMIT_EMAIL || 'contact@caesar.africa';
+    // Web3Forms helper function
+    const submitToWeb3Forms = async (data: any) => {
+        const web3formsKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '5847e2e2-90f4-4c1c-b0f0-3d70d9507953';
 
         const formData = new FormData();
-        formData.append('_subject', 'New Tax Widget Lead from Caesar website');
-        formData.append('_template', 'table');
-        formData.append('_captcha', 'true');
-        formData.append('_form_type', 'tax-widget-lead');
+        formData.append('access_key', web3formsKey);
+        formData.append('subject', 'New Tax Widget Lead from Caesar website');
+        formData.append('from_name', 'Caesar Tax Widget');
+        formData.append('form_type', 'tax-widget-lead');
 
         // Add all data fields
         Object.keys(data).forEach(key => {
@@ -173,12 +173,16 @@ export default function TaxWidget({ onOpenModal }: TaxWidgetProps) {
         });
 
         try {
-            await fetch(`https://formsubmit.co/${formSubmitEmail}`, {
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 body: formData,
             });
+            const result = await response.json();
+            if (!result.success) {
+                console.error('Web3Forms error:', result.message);
+            }
         } catch (error) {
-            console.error('Error submitting to FormSubmit:', error);
+            console.error('Error submitting to Web3Forms:', error);
         }
     };
 
@@ -247,7 +251,7 @@ export default function TaxWidget({ onOpenModal }: TaxWidgetProps) {
 
         // Submit lead data with calculation results to FormSubmit
         if (storedLeadData) {
-            submitToFormSubmit({
+            submitToWeb3Forms({
                 ...storedLeadData,
                 calculator_type: 'Individual',
                 crypto_income: formatNaira(cryptoIncomeNgn),
@@ -295,7 +299,7 @@ export default function TaxWidget({ onOpenModal }: TaxWidgetProps) {
 
         // Submit lead data with calculation results to FormSubmit
         if (storedLeadData) {
-            submitToFormSubmit({
+            submitToWeb3Forms({
                 ...storedLeadData,
                 calculator_type: 'Platform',
                 fee_revenue: formatNaira(feeRevenueNgn),

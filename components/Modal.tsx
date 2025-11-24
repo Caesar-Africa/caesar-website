@@ -78,13 +78,12 @@ export default function Modal({ isOpen, onClose, type }: ModalProps) {
                     <p>{config.subtitle}</p>
                 </div>
 
-                <form className={styles.modalForm} action={`https://formsubmit.co/${formSubmitEmail}`} method="POST">
-                    {/* FormSubmit configuration */}
-                    <input type="hidden" name="_subject" value={`New ${type} request from Caesar website`} />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_captcha" value="true" />
-                    <input type="hidden" name="_next" value="https://www.caesar.africa?submitted=true" />
-                    <input type="hidden" name="_form_type" value={type} />
+                <form className={styles.modalForm} action="https://api.web3forms.com/submit" method="POST">
+                    {/* Web3Forms configuration */}
+                    <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '5847e2e2-90f4-4c1c-b0f0-3d70d9507953'} />
+                    <input type="hidden" name="subject" value={`New ${type} request from Caesar website`} />
+                    <input type="hidden" name="redirect" value="https://www.caesar.africa?submitted=true" />
+                    <input type="hidden" name="form_type" value={type} />
 
                     <div className={styles.formGroup}>
                         <label className={styles.formLabel}>
