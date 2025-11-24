@@ -21,13 +21,13 @@ export default function Footer({ onNavigate }: FooterProps) {
                         </p>
 
                         <div className={styles.socialLinks}>
-                            <a href="#" className={styles.socialLink} aria-label="Twitter">
+                            <a href="https://x.com/Caesar_Tax" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Twitter">
                                 <span>X</span>
                             </a>
                             <a href="https://www.linkedin.com/company/caesar-africa" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
                                 <span>in</span>
                             </a>
-                            <a href="#" className={styles.socialLink} aria-label="Email">
+                            <a href="mailto:hello@caesar.africa" className={styles.socialLink} aria-label="Email">
                                 <span>@</span>
                             </a>
                         </div>

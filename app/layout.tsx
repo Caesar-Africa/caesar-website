@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         title: "Caesar - Crypto Tax Rail for African Markets",
         description: "Automated crypto tax calculation and compliance for platforms and regulators in Africa.",
         images: ["/og-image.png"],
-        creator: "@caesarafrica"
+        creator: "@Caesar_Tax"
     },
     robots: {
         index: true,
@@ -104,7 +104,7 @@ export default function RootLayout({
                                         areaServed: "NG"
                                     },
                                     sameAs: [
-                                        "https://twitter.com/caesarafrica",
+                                        "https://x.com/Caesar_Tax",
                                         "https://www.linkedin.com/company/caesar-africa"
                                     ]
                                 },
