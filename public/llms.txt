@@ -1,0 +1,39 @@
+# Caesar
+
+> Caesar is a crypto tax engine for platforms and regulators in Africa. We turn transaction data from exchanges, wallets, and fintechs into tax-ready outputs: user-level tax positions, platform-level VAT and WHT, and compliance reports—all aligned with Nigerian tax rules.
+
+Caesar is built for organisations, not individual taxpayers. We integrate via API or file upload to calculate crypto tax obligations automatically.
+
+**Key facts:**
+- Based in Lagos, Nigeria
+- Supports Nigerian tax rules (individual PIT, corporate CIT, VAT, WHT)
+- Serves crypto exchanges, wallets, fintechs, and tax authorities
+- Pricing: annual contracts starting at $5,000/year for platforms
+- Contact: hello@caesar.africa
+
+**What we calculate:**
+- User tax positions: capital gains and income from crypto trading, staking, rewards, airdrops, NFTs
+- Platform obligations: VAT on fees, WHT on service payments, crypto-related profits
+- Tax outputs updated when Nigerian rules change
+
+## Product
+
+- [Product overview](https://www.caesar.africa/product): How Caesar works, data flow, and tax calculation process
+- [For platforms](https://www.caesar.africa/platforms): Benefits for exchanges, wallets, and fintechs
+- [For governments](https://www.caesar.africa/governments): Regulatory analytics and compliance monitoring
+- [Pricing](https://www.caesar.africa/pricing): Plans for platforms (Entry, Growth, Enterprise) and governments
+
+## Documentation
+
+- [FAQ](https://www.caesar.africa/faq): 31 detailed questions covering taxable events, integration, pricing, security, and support
+- [About](https://www.caesar.africa/about): Company mission and approach to crypto tax infrastructure
+
+## Legal
+
+- [Privacy Policy](https://www.caesar.africa/privacy): How we collect, use, and protect personal data (effective September 1, 2025)
+- [Terms of Service](https://www.caesar.africa/terms): Terms governing use of Caesar services (effective September 1, 2025)
+- [Cookie Policy](https://www.caesar.africa/cookies): How we use cookies and similar technologies
+
+## Optional
+
+- [Contact](https://www.caesar.africa/contact): Get in touch with the Caesar team

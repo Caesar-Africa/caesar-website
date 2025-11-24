@@ -1,0 +1,163 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 15, 30, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav.scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navLinks {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.navLinks a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.navLinks a:hover {
+    color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.navLinks a:active {
+    transform: translateY(0);
+}
+
+.navLinks a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient);
+    transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+    width: 100%;
+}
+
+.navLinks a.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.navLinks a.active::after {
+    width: 100%;
+}
+
+.navCta {
+    background: var(--gradient);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.navCta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.mobileMenuToggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 1001;
+}
+
+.mobileMenuToggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--primary);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(15, 15, 30, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-bottom: 1px solid var(--border);
+        z-index: 999;
+    }
+
+    .navLinks.mobileOpen {
+        display: flex;
+    }
+
+    .mobileMenuToggle {
+        display: flex;
+    }
+
+    .navCta {
+        display: none;
+    }
+
+    .navLinks a {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .navLinks a:hover {
+        background: rgba(102, 126, 234, 0.1);
+    }
+}
