@@ -76,7 +76,7 @@ export default function Navbar({ activePage, onNavigate, onOpenModal }: NavbarPr
                 </div>
 
                 <a onClick={onOpenModal} className={styles.navCta} aria-label="Open contact modal">
-                    Talk to us
+                    Request Access
                 </a>
 
                 <button

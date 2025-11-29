@@ -19,7 +19,7 @@ import CookiePolicyPage from '@/components/pages/CookiePolicyPage';
 export default function Home() {
     const [activePage, setActivePage] = useState('home');
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalType, setModalType] = useState<'book-demo' | 'get-started' | 'talk-to-us' | 'contact-sales' | 'request-brief'>('talk-to-us');
+    const [modalType, setModalType] = useState<'book-demo' | 'get-started' | 'talk-to-us' | 'contact-sales' | 'request-brief' | 'request-access'>('talk-to-us');
 
     const openModal = (type: typeof modalType) => {
         setModalType(type);
@@ -41,7 +41,7 @@ export default function Home() {
 
     return (
         <>
-            <Navbar activePage={activePage} onNavigate={navigateTo} onOpenModal={() => openModal('talk-to-us')} />
+            <Navbar activePage={activePage} onNavigate={navigateTo} onOpenModal={() => openModal('request-access')} />
 
             <main>
                 {activePage === 'home' && <HomePage onNavigate={navigateTo} onOpenModal={openModal} />}

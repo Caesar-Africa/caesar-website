@@ -6,7 +6,7 @@ import styles from '../sections/shared.module.css';
 
 interface PricingPageProps {
     onNavigate: (page: string) => void;
-    onOpenModal: (type: 'book-demo' | 'get-started' | 'talk-to-us' | 'contact-sales') => void;
+    onOpenModal: (type: 'book-demo' | 'get-started' | 'talk-to-us' | 'contact-sales' | 'request-access') => void;
 }
 
 export default function PricingPage({ onNavigate, onOpenModal }: PricingPageProps) {
@@ -44,29 +44,35 @@ export default function PricingPage({ onNavigate, onOpenModal }: PricingPageProp
                             <div className={styles.iconCards}>
                                 <div className={styles.iconCard} style={{ marginTop: '25px' }}>
                                     <div className={styles.iconWrapper}>🚀</div>
-                                    <h3>Entry</h3>
-                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>For growing platforms</p>
+                                    <h3>Starter</h3>
+                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>For crypto platforms with up to 5,000 tax-active users</p>
                                     <p style={{ fontSize: '1.8rem', fontWeight: 'bold', margin: '20px 0', color: 'var(--primary)' }}>
-                                        From $5,000<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}> / year</span>
+                                        $300<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}> / mo</span>
                                     </p>
                                     <ul style={{ textAlign: 'left', margin: '20px 0', color: 'var(--text-secondary)', listStyle: 'none' }}>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> User-level crypto tax calculations (Nigeria)
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> $0.06 per tax-active user
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Platform VAT/WHT figures (Nigeria)
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> $300 monthly minimum
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Partner dashboard & CSV exports
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> User-level crypto tax calculations (NG-2026)
+                                        </li>
+                                        <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Platform VAT/WHT calculations
+                                        </li>
+                                        <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Partner dashboard & FIRS-ready exports
+                                        </li>
+                                        <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Full API access
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
                                             <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Email support
                                         </li>
-                                        <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Up to 20,000 taxed users per year*
-                                        </li>
                                     </ul>
-                                    <button onClick={() => onOpenModal('get-started')} className={styles.btnPrimary} style={{ width: '100%' }}>
+                                    <button onClick={() => onOpenModal('request-access')} className={styles.btnPrimary} style={{ width: '100%' }}>
                                         Get started
                                     </button>
                                 </div>
@@ -77,31 +83,28 @@ export default function PricingPage({ onNavigate, onOpenModal }: PricingPageProp
                                     </div>
                                     <div className={styles.iconWrapper}>⚡</div>
                                     <h3>Growth</h3>
-                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>For higher-volume platforms</p>
+                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>For crypto platforms with 5,000–75,000 tax-active users</p>
                                     <p style={{ fontSize: '1.8rem', fontWeight: 'bold', margin: '20px 0', color: 'var(--primary)' }}>
-                                        From $24,000<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}> / year</span>
+                                        $300–$4,500<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}> / mo</span>
                                     </p>
                                     <ul style={{ textAlign: 'left', margin: '20px 0', color: 'var(--text-secondary)', listStyle: 'none' }}>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Everything in Entry
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Everything in Starter
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Higher volume limits
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Priority support (faster response times)
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Full API integration & webhooks
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Shared Slack/Teams channel (optional)
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Priority support
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Custom export formats for regulators & internal BI
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Custom reports & data feeds
-                                        </li>
-                                        <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Volume discounts after 50,000 taxed users*
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> 15% discount with 12-month commitment
                                         </li>
                                     </ul>
-                                    <button onClick={() => onOpenModal('get-started')} className={styles.btnPrimary} style={{ width: '100%' }}>
+                                    <button onClick={() => onOpenModal('request-access')} className={styles.btnPrimary} style={{ width: '100%' }}>
                                         Get started
                                     </button>
                                 </div>
@@ -109,26 +112,29 @@ export default function PricingPage({ onNavigate, onOpenModal }: PricingPageProp
                                 <div className={styles.iconCard} style={{ marginTop: '25px' }}>
                                     <div className={styles.iconWrapper}>🏢</div>
                                     <h3>Enterprise</h3>
-                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>For large exchanges and platform groups</p>
+                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>For platforms with 75,000+ tax-active users or multi-country operations</p>
                                     <p style={{ fontSize: '1.8rem', fontWeight: 'bold', margin: '20px 0', color: 'var(--primary)' }}>Let&apos;s talk</p>
                                     <ul style={{ textAlign: 'left', margin: '20px 0', color: 'var(--text-secondary)', listStyle: 'none' }}>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
                                             <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Everything in Growth
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Support for multiple business units/entities
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Custom volume pricing
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> White-label portals
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Multiple entities/tax IDs under one account
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Dedicated account & solutions engineer
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> White-label crypto tax portals
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Contractual SLAs
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Dedicated account manager & solutions engineer
                                         </li>
                                         <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Custom integrations into your data stack
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Contractual SLAs & security reviews
+                                        </li>
+                                        <li style={{ margin: '12px 0', paddingLeft: '20px', position: 'relative' }}>
+                                            <span style={{ position: 'absolute', left: '0', color: 'var(--accent)' }}>✓</span> Roadmap for additional countries (Kenya, South Africa)
                                         </li>
                                     </ul>
                                     <button onClick={() => onOpenModal('contact-sales')} className={styles.btnPrimary} style={{ width: '100%' }}>
