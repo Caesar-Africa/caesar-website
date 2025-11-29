@@ -27,7 +27,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                             <a href="https://www.linkedin.com/company/caesar-africa" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
                                 <span>in</span>
                             </a>
-                            <a href="mailto:hello@caesar.africa" className={styles.socialLink} aria-label="Email">
+                            <a href="mailto:contact@caesar.africa" className={styles.socialLink} aria-label="Email">
                                 <span>@</span>
                             </a>
                         </div>

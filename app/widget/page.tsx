@@ -8,7 +8,7 @@ import Modal from "@/components/Modal";
 
 export default function WidgetPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalType, setModalType] = useState<"book-demo" | "get-started" | "talk-to-us" | "contact-sales" | "request-brief">("talk-to-us");
+    const [modalType, setModalType] = useState<"book-demo" | "get-started" | "talk-to-us" | "contact-sales" | "request-brief" | "request-access">("talk-to-us");
 
     const openModal = (type: typeof modalType) => {
         setModalType(type);
@@ -57,7 +57,7 @@ export default function WidgetPage() {
             <Navbar
                 activePage="widget"
                 onNavigate={handleNavigate}
-                onOpenModal={() => openModal("talk-to-us")}
+                onOpenModal={() => openModal("request-access")}
             />
 
             <div className="pt-24 relative z-10">
